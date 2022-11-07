@@ -1,0 +1,65 @@
+DGP - Dominy's Garden Protocol
+
+o protocolo será composto por 4 partes:  topico, opção e paranmetro de configuraçáo 
+
+
+MENSAGEM: '/topic/config/' 'SHOW HIGH_UMIDITY' OUTPUT: '70%'
+MENSAGEM: '/topic/config/' 'SET HIGH_UMIDITY 72' OUTPUT: '72% IS NEW SET'
+
+
+
+
+
+
+
+
+ 
+DGP2 - Dominy's Garden Protocol 2
+
+o protocolo será composto por topicos especificos com mensagem com apenas uma pequena informações
+
+MENSAGEM: '/topic/config/high_umidity_show' '70' OUTPUT: '70'
+MENSAGEM: '/topic/config/high_umidity_set' '70' OUTPUT: '70 setted'
+
+varios topicos especificos para cada fim especifico:
+
+Exemplos
+
+  /farm/dev/sl/
+    |   |   |
+	|   |   |
+	|   |   | 
+	|   |   |
+	|   |   |_ Solenoid ( Esp Responsavel Pela Válvula Solenoide)
+	|   |
+	|   |_ Dispostivos (Solenoides, sensores e etc.)
+    |
+	|_ RAIZ (Fazenda)
+
+  /farm/dev/sl/config/
+    |   |   |    |
+	|   |   |    |
+	|   |   |    |_ Configuração (Topicos de configuração)
+	|   |   |
+	|   |   |_ Solenoid ( Esp Responsavel Pela Válvula Solenoide)
+	|   |
+	|   |_ Dispostivos (Solenoides, sensores e etc.)
+    |
+	|_ RAIZ (Fazenda)
+
+  /farm/dev/sl/config/orders/ -> Recebe ordens do Esp controlador do Sensor de humidade -> SUB
+  /farm/dev/sl/config/give_my_config/ -> Manda mensagem pendindo configuração para o "Gestor" e recebe seus paranmetro de volta -> SUB & PUB
+  /farm/dev/sl/feedback/status/ -> Ao receber uma mensagem-pergunta para saber seu status ON/OFF publica seu status -> SUB & PUB
+  /farm/dev/sl/feedback/water_pred/ -> Ao receber uma mensagem-pergunta para saber quando seu funcionamento inicio o publica -> SUB & PUB
+
+
+  /farm/dev/ss/send_umidity/ ->  Constantimente manda os dados de humidade para o "Gestor" -> PUB
+
+  
+
+
+
+
+
+   
+	
