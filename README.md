@@ -1,7 +1,7 @@
 ﻿# Dominys-Garden 🌿
  A low cost, open source project for automated irrigation based on ESP orchestrated soil moisture
  
- ![aspersao](https://blog.broto.com.br/wp-content/uploads/2022/03/irrigacao-por-aspersao.jpeg)
+ ![aspersao](https://maxmaq.com.br/wp-content/uploads/2019/10/mangueira-de-irrigacao-por-gotejamento-p1-500-metros-D_NQ_NP_646359-MLB27979211853_082018-F-1280x720-1-768x432.jpg)
  
  
 
